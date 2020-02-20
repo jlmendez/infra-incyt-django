@@ -20,3 +20,17 @@ class Choice(models.Model):
 
 	def __str__(self):
 		return self.choice_text
+
+class ISE2_INFRA(models.Model):
+	ISE2_INFRA_id = models.IntegerField(default=0)
+	infrasonido_1 = models.FloatField(default=0)
+	infrasonido_2 = models.FloatField(default=0)
+	infrasonido_3 = models.FloatField(default=0)
+	infrasonido_4 = models.FloatField(default=0)
+	infrasonido_5 = models.FloatField(default=0)
+	posicion = models.CharField(max_length=200)
+	fecha_recepcion = models.DateTimeField('fecha_captura')
+
+	def __str__(self):
+		return self.fecha_recepcion	
+	
