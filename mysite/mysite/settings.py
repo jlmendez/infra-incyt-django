@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+	'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,7 +83,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django_pyodbc',
+        'ENGINE': 'sql_server.pyodbc',
         'HOST': 'tcp:iotserviciogis.database.windows.net',
         'PORT': '1433',
         'NAME': 'iotgis',
@@ -90,7 +91,7 @@ DATABASES = {
         'PASSWORD': '1358$oxalacetato',
         'AUTOCOMMIT': True,
         'OPTIONS': {
-            'driver': 'ODBC Driver 13 for SQL Server',  # Should match the driver listed in ODBC Drivers tab
+            'driver': 'ODBC Driver 17 for SQL Server',  # Should match the driver listed in ODBC Drivers tab
         }
     }
 }

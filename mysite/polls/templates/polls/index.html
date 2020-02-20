@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<link href=”http://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.css" rel=”stylesheet” type=”text/css”>
+ 		<link href=”http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.2.0.min.css" rel=”stylesheet” type=”text/css”>
+
+		<script src=”http://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.js"></script>
+ 		<script src=”http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.2.0.min.js"></script>
+		{{ script | safe }}
+</head>
+<body>
+	{{ div | safe }}
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</body>
+</html>
