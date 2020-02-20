@@ -1,12 +1,15 @@
-#from django.shortcuts import render
+import pandas as pd
+import datetime
 from django.shortcuts import render, render_to_response
-from bokeh.plotting import figure, output_file, show
+from bokeh.plotting import figure, output_file, show #, ColumnDataSource
+from bokeh.models import ColumnDataSource
 from bokeh.embed import components
+
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 #from django.template import loader
 from django.shortcuts import get_object_or_404, render
-from .models import Choice, Question
+from .models import Choice, Question, ISE2_INFRA
 # Create your views here.
 
 #def index(request):
@@ -14,16 +17,16 @@ from .models import Choice, Question
 
 def homepage(request):
 	#Graph X & Y coordinates
-	x=[1,2,3,4,5,6]
-	y=[1,2,3,4,5,6]
 
-	plot = figure(title = 'Line Graph', x_axis_label = 'X-Axis', y_axis_label = 'Y-Axis', plot_width = 400, plot_height = 400)
 
-	plot.line(x,y,line_width = 2)
-
+	df = pd.DataFrame(list(ISE2_INFRA.objects.all().values('fecha_recepcion','infrasonido_1')[:5000]))
+	source = ColumnDataSource(df)
+	plot = figure(title = 'Line Graph', x_axis_label = 'X-Axis', y_axis_label = 'Y-Axis', plot_width = 1000, plot_height = 400)
+	plot.line('fecha_recepcion', 'infrasonido_1', source=source, line_width=3, line_alpha=0.6)
+	#plot.line(x,y,line_width = 2)
 	script, div = components(plot)
-
-	return render_to_response('pages/index.html', {'script': script, 'div': div})
+    
+	return render_to_response('polls/dash.html', {'script': script, 'div': div})
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
