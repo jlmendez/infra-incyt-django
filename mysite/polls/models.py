@@ -34,3 +34,19 @@ class ISE2_INFRA(models.Model):
 	def __str__(self):
 		return self.fecha_recepcion	
 	
+	def published_recently(self):
+		return self.fecha_recepcion >= timezone.now() - datetime.timedelta(minutes=1)
+
+
+class PollManager(models.Manager):
+    def with_counts(self):
+        from django.db import connection
+        with connection.cursor() as cursor:
+            cursor.execute("""
+                select * from v_ise2_infr_Zdat""")
+            result_list = []
+            for row in cursor.fetchall():
+                p = self.model(id=row[0], question=row[1], poll_date=row[2])
+                p.num_responses = row[3]
+                result_list.append(p)
+        return result_list
