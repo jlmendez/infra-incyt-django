@@ -1,0 +1,137 @@
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W005) URL namespace 'polls' isn't unique. You may not be able to reverse all URLs in this namespace
+
+System check identified 1 issue (0 silenced).
+[12/Mar/2020 11:50:12] "GET /volcanes/ HTTP/1.1" 200 15188
+Performing system checks...
+
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, polls, sessions.
+Run 'python manage.py migrate' to apply them.
+March 12, 2020 - 11:49:32
+Django version 2.1, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W005) URL namespace 'polls' isn't unique. You may not be able to reverse all URLs in this namespace
+
+System check identified 1 issue (0 silenced).
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W005) URL namespace 'polls' isn't unique. You may not be able to reverse all URLs in this namespace
+
+System check identified 1 issue (0 silenced).
+[12/Mar/2020 12:20:30] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:20:31] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:20:43] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:20:59] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:22:00] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:23:01] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:24:02] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:25:03] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:26:04] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:27:05] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:28:06] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:29:07] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:30:08] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:31:09] "GET /volcanes/ HTTP/1.1" 200 15188
+[12/Mar/2020 12:32:10] "GET /volcanes/ HTTP/1.1" 200 15188
+Performing system checks...
+
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, polls, sessions.
+Run 'python manage.py migrate' to apply them.
+March 12, 2020 - 12:20:20
+Django version 2.1, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W005) URL namespace 'polls' isn't unique. You may not be able to reverse all URLs in this namespace
+
+System check identified 1 issue (0 silenced).
+Performing system checks...
+
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, polls, sessions.
+Run 'python manage.py migrate' to apply them.
+March 12, 2020 - 13:15:55
+Django version 2.1, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W005) URL namespace 'polls' isn't unique. You may not be able to reverse all URLs in this namespace
+
+System check identified 1 issue (0 silenced).
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W005) URL namespace 'polls' isn't unique. You may not be able to reverse all URLs in this namespace
+
+System check identified 1 issue (0 silenced).
+[12/Mar/2020 17:56:02] "GET /volcanes HTTP/1.1" 301 0
+Internal Server Error: /volcanes/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/virtualenv/infra-django/mysite/polls/views.py", line 41, in homepage
+    frame.columns= ['fecha_sistema','gxe','gye','gze','axe','aye','aze']
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/generic.py", line 5287, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 67, in pandas._libs.properties.AxisProperty.__set__
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/generic.py", line 661, in _set_axis
+    self._data.set_axis(axis, labels)
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/internals/managers.py", line 178, in set_axis
+    f"Length mismatch: Expected axis has {old_len} elements, new "
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 7 elements
+[12/Mar/2020 17:56:02] "GET /volcanes/ HTTP/1.1" 500 80588
+Internal Server Error: /volcanes/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/virtualenv/infra-django/mysite/polls/views.py", line 41, in homepage
+    frame.columns= ['fecha_sistema','gxe','gye','gze','axe','aye','aze']
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/generic.py", line 5287, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 67, in pandas._libs.properties.AxisProperty.__set__
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/generic.py", line 661, in _set_axis
+    self._data.set_axis(axis, labels)
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/internals/managers.py", line 178, in set_axis
+    f"Length mismatch: Expected axis has {old_len} elements, new "
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 7 elements
+[12/Mar/2020 18:27:55] "GET /volcanes/ HTTP/1.1" 500 81534
+Internal Server Error: /volcanes/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/virtualenv/infra-django/mysite/polls/views.py", line 41, in homepage
+    frame.columns= ['fecha_sistema','gxe','gye','gze','axe','aye','aze']
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/generic.py", line 5287, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 67, in pandas._libs.properties.AxisProperty.__set__
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/generic.py", line 661, in _set_axis
+    self._data.set_axis(axis, labels)
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/internals/managers.py", line 178, in set_axis
+    f"Length mismatch: Expected axis has {old_len} elements, new "
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 7 elements
+[12/Mar/2020 18:34:17] "GET /volcanes/ HTTP/1.1" 500 81669
